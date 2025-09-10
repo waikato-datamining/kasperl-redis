@@ -2,13 +2,13 @@ import abc
 import argparse
 
 import redis
-from seppl.io import Filter
+from seppl.io import BatchFilter
 from wai.logging import LOGGING_WARNING
 
 from kasperl.redis.core import RedisSession
 
 
-class AbstractRedisFilter(Filter, abc.ABC):
+class AbstractRedisFilter(BatchFilter, abc.ABC):
     """
     Ancestor for redis-based filters.
     """
